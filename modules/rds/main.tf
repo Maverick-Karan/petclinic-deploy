@@ -28,7 +28,7 @@ resource "aws_security_group" "database_security_group" {
 # create the subnet group for the rds instance
 resource "aws_db_subnet_group" "database_subnet_group" {
   name         = "db-secure-subnets"
-  subnet_ids   = [var.secure_subnet_az1_id]
+  subnet_ids   = [var.secure_subnet_az1_id,var.secure_subnet_az2_id]
   description  = "rds in secure subnet"
 
   tags   = {
