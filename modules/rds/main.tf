@@ -9,7 +9,7 @@ resource "aws_security_group" "database_security_group" {
     from_port        = 3306
     to_port          = 3306
     protocol         = "tcp"
-    security_groups  = [var.ec2_private_sg]
+    security_groups  = [var.ec2_security_group_id]
   }
 
   egress {

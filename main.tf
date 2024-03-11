@@ -49,6 +49,7 @@ module "rds" {
   alb_security_group_id = module.security_group.alb_security_group_id
   secure_subnet_az1_id  = module.vpc.secure_subnet_az1_id
   secure_subnet_az2_id  = module.vpc.secure_subnet_az2_id
+  ec2_security_group_id = module.security_group.ec2_security_group_id
   az1                   = var.az1
   az2                   = var.az2
   identifier            = var.identifier

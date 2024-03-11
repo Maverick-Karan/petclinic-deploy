@@ -10,3 +10,7 @@ variable "secure_subnet_az2_cidr" {}
 variable "az1" {}
 variable "az2" {}
 variable "ami" {}
+variable "identifier" {}
+variable "username" {}
+variable "password" {}
+variable "db_name" {}
