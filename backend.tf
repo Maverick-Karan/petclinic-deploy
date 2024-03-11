@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "my-pc-bucket3"
+    bucket         = "pc-remotestate"
     key            = "default/terraform.tfstate"
     region         = "us-east-2"
-    dynamodb_table = "petclinic-table"
+    dynamodb_table = "pet-state-locking"
     encrypt        = "true"
   }
 }
