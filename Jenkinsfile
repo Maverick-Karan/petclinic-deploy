@@ -9,9 +9,6 @@ pipeline {
     
     stages {
         stage('Terraform Plan & Validate') {
-            when {
-                branch 'terra'
-            }
             steps {
                 sh 'terraform init'
                 sh 'terraform plan -out=tfplan'
