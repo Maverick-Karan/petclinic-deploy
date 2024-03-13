@@ -69,5 +69,6 @@ module "asg" {
   alb_target_group_arn      = module.application_load_balancer.alb_target_group_arn
   alb_security_group_id     = module.security_group.alb_security_group_id
   ec2_security_group_id     = module.security_group.ec2_security_group_id
+  iam_ec2_instance_profile  = module.aws_iam_instance_profile.ec2_instance_profile
   ami                       = var.ami
 }
