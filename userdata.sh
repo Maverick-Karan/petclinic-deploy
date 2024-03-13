@@ -12,6 +12,24 @@ cat <<EOF | sudo tee /opt/aws/amazon-cloudwatch-agent/bin/config.json
                         "log_group_name": "my-log-group",
                         "log_stream_name": "{instance_id}-messages",
                         "timezone": "UTC"
+                    },
+                    {
+                        "file_path": "/var/log/auth.log",
+                        "log_group_name": "my-log-group",
+                        "log_stream_name": "{instance_id}-auth",
+                        "timezone": "UTC"
+                    },
+                    {
+                        "file_path": "/var/log/cloud-init.log",
+                        "log_group_name": "my-log-group",
+                        "log_stream_name": "{instance_id}-cloud-init",
+                        "timezone": "UTC"
+                    },
+                    {
+                        "file_path": "/var/log/cloud-init-output.log",
+                        "log_group_name": "my-log-group",
+                        "log_stream_name": "{instance_id}-cloud-init-output",
+                        "timezone": "UTC"
                     }
                 ]
             }
