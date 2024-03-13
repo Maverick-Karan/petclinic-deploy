@@ -4,7 +4,7 @@ resource "aws_launch_template" "ec2_asg" {
   image_id              = var.ami
   instance_type         = "t2.micro"
   iam_instance_profile {
-    name = var.iam_ec2_instance_profile.name
+    name = var.iam_ec2_instance_profile
   }
   user_data = base64encode(templatefile(("userdata.sh"), {mysql_url = var.rds_db_endpoint}))
   vpc_security_group_ids = [var.ec2_security_group_id]
