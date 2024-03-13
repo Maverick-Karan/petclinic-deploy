@@ -72,3 +72,8 @@ module "asg" {
   iam_ec2_instance_profile  = module.iam_role.iam_ec2_instance_profile
   ami                       = var.ami
 }
+
+#create iam_role
+module "iam_role" {
+   source                   = "./modules/iam_role"
+}
