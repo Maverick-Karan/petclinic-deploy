@@ -24,7 +24,7 @@ resource "aws_iam_role_policy_attachment" "ec2_role_policy" {
 
 # Attach CloudWatchLogsFullAccess policy to the IAM role
 resource "aws_iam_role_policy_attachment" "ec2_role_cloudwatch_policy" {
-  policy_arn = "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
+  policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentAdminPolicy"
   role       = aws_iam_role.ec2_role.name
 }
 
