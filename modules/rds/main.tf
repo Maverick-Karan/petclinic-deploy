@@ -45,7 +45,7 @@ resource "aws_db_instance" "db_instance" {
   identifier              = var.identifier
   username                = var.username
   password                = var.password
-  instance_class          = "db.t2.micro"
+  instance_class          = "db.t2.small"
   allocated_storage       = 20
   publicly_accessible     = true
   db_subnet_group_name    = aws_db_subnet_group.database_subnet_group.name
