@@ -40,12 +40,12 @@ resource "aws_db_subnet_group" "database_subnet_group" {
 # create the rds instance
 resource "aws_db_instance" "db_instance" {
   engine                  = "mysql"
-  engine_version          = "8.0.32"
+  engine_version          = "8.0.36"
   multi_az                = false
   identifier              = var.identifier
   username                = var.username
   password                = var.password
-  instance_class          = "db.t2.micro"
+  instance_class          = "db.t3.small"
   allocated_storage       = 20
   publicly_accessible     = true
   db_subnet_group_name    = aws_db_subnet_group.database_subnet_group.name
